@@ -92,13 +92,13 @@ export default {
 
     },
     toDeleteHandler(id){
-      this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+      this.$confirm('此操作将永久删除该文件, 是否继续?','提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-         let url=" http://localhost:6677/customer/deleteById?id="+id;
-          request.get(url).then((response)=>{
+          let url=" http://localhost:6677/customer/deleteById?id="+id;
+          request.get(url).then((request)=>{
             this.loadData();
             this.$message({
             type: 'success',
